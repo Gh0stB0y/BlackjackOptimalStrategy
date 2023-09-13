@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "F:\\C#\\BlackjackStrategyOptimization\\dummy\\BlackjackStrategy\\BlackjackStrategy\\BlackjackStrategy.csproj",
+      "projectUniqueName": "C:\\Users\\admin\\Source\\Repos\\BlackjackOptimalStrategy\\BlackjackStrategy\\BlackjackStrategy.csproj",
       "projectName": "BlackjackStrategy",
-      "projectPath": "F:\\C#\\BlackjackStrategyOptimization\\dummy\\BlackjackStrategy\\BlackjackStrategy\\BlackjackStrategy.csproj",
+      "projectPath": "C:\\Users\\admin\\Source\\Repos\\BlackjackOptimalStrategy\\BlackjackStrategy\\BlackjackStrategy.csproj",
       "packagesPath": "C:\\Users\\admin\\.nuget\\packages\\",
-      "outputPath": "F:\\C#\\BlackjackStrategyOptimization\\dummy\\BlackjackStrategy\\BlackjackStrategy\\obj\\",
+      "outputPath": "C:\\Users\\admin\\Source\\Repos\\BlackjackOptimalStrategy\\BlackjackStrategy\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "E:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

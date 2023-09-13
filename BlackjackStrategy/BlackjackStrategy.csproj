@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -6,5 +6,21 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="DecisionMaking\BasicStrategyFirstCard\" />
+    <Folder Include="DecisionMaking\BasicStrategyMoreCards\" />
+    <Folder Include="DecisionMaking\Betting\" />
+    <Folder Include="GameModels\DealerModel\" />
+    <Folder Include="GameModels\PlayerModel\" />
+    <Folder Include="GameModels\SeatModel\" />
+    <Folder Include="DataContainers\" />
+    <Folder Include="GameParameters\" />
+    <Folder Include="Mediator\Commands\" />
+    <Folder Include="Mediator\Handlers\Commands\" />
+    <Folder Include="Mediator\Handlers\Queries\" />
+    <Folder Include="Mediator\Queries\" />
+    <Folder Include="OptimizationParameters\" />
+  </ItemGroup>
 
 </Project>

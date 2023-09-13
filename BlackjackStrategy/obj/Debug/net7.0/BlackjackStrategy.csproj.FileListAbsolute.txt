@@ -1,0 +1,15 @@
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\bin\Debug\net7.0\BlackjackStrategy.exe
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\bin\Debug\net7.0\BlackjackStrategy.deps.json
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\bin\Debug\net7.0\BlackjackStrategy.runtimeconfig.json
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\bin\Debug\net7.0\BlackjackStrategy.dll
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\bin\Debug\net7.0\BlackjackStrategy.pdb
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.csproj.AssemblyReference.cache
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.AssemblyInfoInputs.cache
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.AssemblyInfo.cs
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.csproj.CoreCompileInputs.cache
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.dll
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\refint\BlackjackStrategy.dll
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.pdb
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.genruntimeconfig.cache
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\ref\BlackjackStrategy.dll
