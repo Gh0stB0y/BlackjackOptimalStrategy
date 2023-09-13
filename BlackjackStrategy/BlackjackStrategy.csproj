@@ -11,16 +11,14 @@
     <Folder Include="DecisionMaking\BasicStrategyFirstCard\" />
     <Folder Include="DecisionMaking\BasicStrategyMoreCards\" />
     <Folder Include="DecisionMaking\Betting\" />
-    <Folder Include="GameModels\DealerModel\" />
-    <Folder Include="GameModels\PlayerModel\" />
-    <Folder Include="GameModels\SeatModel\" />
     <Folder Include="DataContainers\" />
     <Folder Include="GameParameters\" />
-    <Folder Include="Mediator\Commands\" />
-    <Folder Include="Mediator\Handlers\Commands\" />
-    <Folder Include="Mediator\Handlers\Queries\" />
-    <Folder Include="Mediator\Queries\" />
+    <Folder Include="Methods\Queries\" />
     <Folder Include="OptimizationParameters\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="11.7.1" />
   </ItemGroup>
 
 </Project>

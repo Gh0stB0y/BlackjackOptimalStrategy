@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "F5bvYyoCRA9GfnP5cz6a6dfCZP3NrVRXFAeaePetFRgpbecAZlyj4vr8/CKRLdXw7ebnpSzM+npnp5yn7W/PYw==",
+  "dgSpecHash": "IeN8oXB0MNAmUt7oqAhEMZCa/EUCiiircXuVBncxUnK2R4XLDZqvCW/oPhegXfX2A8DNKFPZxkZtfe83+gj1RQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\admin\\Source\\Repos\\BlackjackOptimalStrategy\\BlackjackStrategy\\BlackjackStrategy.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\admin\\.nuget\\packages\\fluentvalidation\\11.7.1\\fluentvalidation.11.7.1.nupkg.sha512"
+  ],
   "logs": []
 }

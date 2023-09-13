@@ -1,7 +1,9 @@
-﻿internal class Program
+﻿using BlackjackStrategy.Methods.Commands;
+internal class Program
 {
     private static void Main(string[] args)
     {
-        Console.WriteLine("Hello, World!");
+        Console.WriteLine("Welcome to my program :) Please set up game parameters");
+        Commands.SetInitialParameters();
     }
 }

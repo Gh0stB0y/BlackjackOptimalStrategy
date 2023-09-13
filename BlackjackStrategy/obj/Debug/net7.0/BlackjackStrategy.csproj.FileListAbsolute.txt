@@ -13,3 +13,5 @@ C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug
 C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.pdb
 C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.genruntimeconfig.cache
 C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\ref\BlackjackStrategy.dll
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\bin\Debug\net7.0\FluentValidation.dll
+C:\Users\admin\Source\Repos\BlackjackOptimalStrategy\BlackjackStrategy\obj\Debug\net7.0\BlackjackStrategy.csproj.CopyComplete
