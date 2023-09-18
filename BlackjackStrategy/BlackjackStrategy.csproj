@@ -13,7 +13,6 @@
     <Folder Include="DecisionMaking\Betting\" />
     <Folder Include="DataContainers\" />
     <Folder Include="GameParameters\" />
-    <Folder Include="Methods\Queries\" />
     <Folder Include="OptimizationParameters\" />
   </ItemGroup>
 

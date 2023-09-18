@@ -16,6 +16,9 @@ namespace BlackjackStrategy.GameModels
         public static bool SecondDealerCard { get; set; } = false;
         public static bool BotPlayers { get; set; } = false;
         public static List<SeatModel> Seats = new();
-        public static List<int>DealerCards { get; set; } = new List<int>();
+        public static List<int>DealerCards { get; set; } = new();
+        public static List<int> ShoeCards { get; set; } = new();
+        public static int CardsPlayed { get; set; } = 0;
+        public static int RedCard { get; set; } = 0;
     }
 }

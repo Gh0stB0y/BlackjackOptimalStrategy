@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackjackStrategy.GameModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,7 +19,12 @@ namespace BlackjackStrategy.Methods.Commands
             {
                 if (int.TryParse(match.Value, out int number))
                 {
-                    numbers.Add(number);
+                    if (number > TableModel.SeatsNumber || number < 1) Console.WriteLine($"Invalid integer: {match.Value}");
+                    else
+                    {
+                        if (!numbers.Contains(number)) numbers.Add(number);
+                        else Console.WriteLine("Seat already typed in input");
+                    }
                 }
                 else
                 {
@@ -29,7 +35,6 @@ namespace BlackjackStrategy.Methods.Commands
             {
                 Console.WriteLine(number);
             }
-
             return numbers;
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackjackStrategy.GameModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,9 +23,9 @@ namespace BlackjackStrategy.Methods.Commands
             {
                 foreach(Match match in matches)
                 {
-                    if (!int.TryParse(match.Value, out int confirmedInput) || confirmedInput <= 0)
+                    if (!int.TryParse(match.Value, out int confirmedInput) || confirmedInput <= 0 || confirmedInput>TableModel.SeatsNumber)
                     {
-                        Console.WriteLine("Negative integer");
+                        Console.WriteLine("Wrong input");
                         return false;
                     }
                 }
