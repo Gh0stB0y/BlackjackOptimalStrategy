@@ -8,11 +8,10 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="DecisionMaking\BasicStrategyFirstCard\" />
-    <Folder Include="DecisionMaking\BasicStrategyMoreCards\" />
+    <Folder Include="DecisionMaking\MoreCardsDecision\" />
     <Folder Include="DecisionMaking\Betting\" />
-    <Folder Include="DataContainers\" />
-    <Folder Include="GameParameters\" />
+    <Folder Include="Methods\Commands\PlayGame\AuxiliaryMethods\DealersTurn\" />
+    <Folder Include="Methods\Commands\PlayGame\AuxiliaryMethods\PlaceYourBets\" />
     <Folder Include="OptimizationParameters\" />
   </ItemGroup>
 

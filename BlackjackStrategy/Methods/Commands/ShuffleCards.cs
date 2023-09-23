@@ -40,7 +40,7 @@ namespace BlackjackStrategy.Methods.Commands
                     preShuffledDeck[j] = temp;
                 }
 
-                foreach (int card in preShuffledDeck) TableModel.ShoeCards.Add(card);
+                foreach (int card in preShuffledDeck) TableModel.ShoeCards.Push(card);
 
                 TableModel.CardsPlayed = 0;
                 double RedCardPercent = RandomObj.Next(600, 850) * 52 * TableModel.DecksNumber / 1000;// * 52 * NumberOfDecks;

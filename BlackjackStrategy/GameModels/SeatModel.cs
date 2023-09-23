@@ -13,7 +13,17 @@ namespace BlackjackStrategy.GameModels
         public bool SeatTakenByPlayer { get; set; } = false;
         public bool SeatActive { get; set; } = false;
 
-        public List<int>Cards = new();
+        public List<int>Cards { get; set; } = new();
+        public int Score { get; set; } = 0;
+        public int AceCount { get; set; } = 0;
+
+        public int WinningStreak { get; set; } = 0;
+        public int Bet { get; set; } = 1;
+
+        public bool AdditionalSeat = false;
+
+        public string LastDecision = string.Empty;
+        //
         public SeatModel(int id) { SeatId = id; }
     }
 }
