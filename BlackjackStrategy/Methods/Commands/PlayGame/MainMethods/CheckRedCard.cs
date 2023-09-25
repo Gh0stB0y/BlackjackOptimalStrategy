@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackjackStrategy.GameModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,12 @@ namespace BlackjackStrategy.Methods.Commands
     {
        public static void CheckRedCard()
        {
-
+            if (TableModel.CardsPlayed >= TableModel.RedCard)
+            {
+                ShuffleCards();
+                Console.WriteLine("Press any key to continue");
+                Console.ReadLine();
+            }
        }
     }
 }

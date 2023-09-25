@@ -20,14 +20,19 @@ namespace BlackjackStrategy.Methods.Commands
                     Queries.Queries.DisplayTableWithCards();
                     FirstDecision(seatId);
                     Queries.Queries.DisplayTableWithCards();
-                    NextDecision(seatId);
+                    
+                    while (!HandBusted(seatId) && TableModel.Seats[seatId].LastDecision == "Hit")
+                    {                    
+                        NextDecision(seatId);
+                    }                    
                 }
                 seatId--;
             } while (seatId >= 0);
-            
+           
         }
         public static void Decisions(int seatId)
         {
+            Queries.Queries.DisplayTableWithCards();
             FirstDecision(seatId);
             Queries.Queries.DisplayTableWithCards();
             NextDecision(seatId);

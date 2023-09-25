@@ -11,6 +11,7 @@ namespace BlackjackStrategy.Methods.Commands
     {
         public static void PlaceYourBets()
         {
+           
             foreach (var seat in TableModel.Seats)
             {
                 if (seat.SeatTaken)
@@ -21,8 +22,13 @@ namespace BlackjackStrategy.Methods.Commands
                         seat.Bet = PlayerModel.BettingSystem[currentBetIndex];
                         if (seat.SeatTakenByPlayer)
                         {
-                            PlayerModel.Bankroll -= seat.Bet;
-                            PlayerModel.Profit -= seat.Bet;
+                            if (PlayerModel.Bankroll - seat.Bet < 0)
+                                PlayerRuined();
+                            else
+                            {
+                                PlayerModel.Bankroll -= seat.Bet;
+                                PlayerModel.Profit -= seat.Bet;
+                            }
                         }
                     }
                     else
@@ -31,9 +37,7 @@ namespace BlackjackStrategy.Methods.Commands
                     }
                 }
                 else seat.Bet = 0;
-
-                
-            }
+                }
         }
     }
 }

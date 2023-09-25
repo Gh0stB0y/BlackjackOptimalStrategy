@@ -20,9 +20,9 @@ namespace BlackjackStrategy.GameModels
         public int WinningStreak { get; set; } = 0;
         public int Bet { get; set; } = 1;
 
-        public bool AdditionalSeat = false;
+        public bool AdditionalSeat { get; set; } = false;
 
-        public string LastDecision = string.Empty;
+        public string LastDecision { get; set; } = string.Empty;
         //
         public SeatModel(int id) { SeatId = id; }
     }

@@ -10,31 +10,23 @@ namespace BlackjackStrategy.Methods.Commands
 {
     public static partial class Commands
     {
-        public static int ManageFirstTwoCards(int seatId)
+        public static int ManageMoreCards(int seatId)
         {
             int DealerCardVal = CardsModel.CardValues[TableModel.DealerCards[0]];
-            //CheckPairs
-            if (CardsModel.CardValues[TableModel.Seats[seatId].Cards[0]] == 
-                    CardsModel.CardValues[TableModel.Seats[seatId].Cards[1]])
-            {
-                int row = (TableModel.Seats[seatId].Score / 2)-2;
-                return CardDecision.PairsChart[row][DealerCardVal-2];
-            }
-            //CheckAce
-            else if (CardsModel.CardValues[TableModel.Seats[seatId].Cards[0]] == 11||
-                    CardsModel.CardValues[TableModel.Seats[seatId].Cards[1]] == 11)
+
+            if (TableModel.Seats[seatId].AceCount > 0 )
             {
                 //TableModel.Seats[seatId].AceCount++;
                 int row = TableModel.Seats[seatId].Score - 13;
                 return CardDecision.SoftChart[row][DealerCardVal - 2];
             }
-            //No Ace no Pair
-            else 
+            else
             {
                 int row = TableModel.Seats[seatId].Score - 5;
                 return CardDecision.HardChart[row][DealerCardVal - 2];
             }
-
         }
+
+
     }
 }

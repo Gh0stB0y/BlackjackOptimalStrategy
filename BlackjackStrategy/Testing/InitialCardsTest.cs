@@ -16,9 +16,8 @@ namespace BlackjackStrategy.Testing
             {
                 if (seat.SeatActive)
                 {
-                    seat.Cards = new List<int>() { 15, 19 };
+                    seat.Cards = new List<int>() { 26, 27 };
                     seat.Score = CardsModel.CardValues[seat.Cards[0]] + CardsModel.CardValues[seat.Cards[1]];
-                    
                 }
                     
             }

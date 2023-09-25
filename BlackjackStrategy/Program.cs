@@ -11,8 +11,8 @@ internal class Program
         Queries.DiplayTableNoCards();
         if (!TableModel.CsmEnabled) Commands.ShuffleCards();
 
-        foreach(var card in TableModel.ShoeCards) { Console.WriteLine(card); }
-        //for (int i = 0; i < PlayerModel.GamesPlayed; i++)Commands.PlayGame();
-        Commands.PlayGame();
+        for (int i = 0; i < 5; i++)
+            Commands.PlayGame();
+
     }
 }

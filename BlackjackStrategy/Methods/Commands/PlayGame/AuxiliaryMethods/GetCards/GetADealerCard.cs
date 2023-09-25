@@ -23,6 +23,15 @@ namespace BlackjackStrategy.Methods.Commands
                 TableModel.DealerScore += CardsModel.CardValues[TableModel.DealerCards.Last()];
                 TableModel.CardsPlayed++;
             }
+
+            if (CardsModel.CardValues[TableModel.DealerCards.Last()] == 11)
+                TableModel.DealerAceCount++;
+
+            if (TableModel.DealerScore > 21 && TableModel.DealerAceCount > 0)
+            {
+                TableModel.DealerScore -= 10;
+                TableModel.DealerAceCount--;
+            }
         }
     }
 }

@@ -28,12 +28,13 @@ namespace BlackjackStrategy.DecisionMaking
             new List<int>(){ 1, 1, 2, 2, 2, 1, 1, 1, 1, 1 },//player's 12
             new List<int>(){ 2, 2, 2, 2, 2, 1, 1, 1, 1, 1 },//player's 13
             new List<int>(){ 2, 2, 2, 2, 2, 1, 1, 1, 1, 1 },//player's 14
-            new List<int>(){ 2, 2, 2, 2, 2, 1, 1, 1, 5, 1 },//player's 15
-            new List<int>(){ 2, 2, 2, 2, 2, 1, 1, 5, 5, 5 },//player's 16
+            new List<int>(){ 2, 2, 2, 2, 2, 1, 1, 1, 6, 1 },//player's 15
+            new List<int>(){ 2, 2, 2, 2, 2, 1, 1, 6, 6, 6 },//player's 16
             new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 17
             new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 18
             new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 19
             new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 20
+            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 } //player's 21
         };
         public static readonly List<List<int>> SoftChart = new List<List<int>>()
         {
@@ -45,6 +46,7 @@ namespace BlackjackStrategy.DecisionMaking
             new List<int>(){ 2, 4, 4, 4, 4, 2, 2, 1, 1, 1 },//player's soft 18 / A7
             new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's soft 19 / A8
             new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's soft 20 / A9
+            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's soft 21 
         };
         public static readonly List<List<int>> PairsChart = new List<List<int>>()
         {

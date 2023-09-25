@@ -26,11 +26,14 @@ namespace BlackjackStrategy.Methods.Commands
                 AdditionalSeat = true
             };
 
-            for (int i = newSeatId; i < TableModel.Seats.Count;i++) TableModel.Seats[seatId].SeatId++;
+            for (int i = newSeatId; i <= TableModel.Seats.Count;i++) TableModel.Seats[seatId].SeatId++;
             TableModel.Seats.Insert(newSeatId, additionalSeat);
 
             TableModel.Seats[newSeatId].Cards.Add(TableModel.Seats[seatId].Cards[1]);
+            TableModel.Seats[newSeatId].Score += CardsModel.CardValues[TableModel.Seats[seatId].Cards[1]];
+            TableModel.Seats[seatId].Score-=CardsModel.CardValues[TableModel.Seats[seatId].Cards[1]];
             TableModel.Seats[seatId].Cards.RemoveAt(1);
+    
 
             if (TableModel.Seats[seatId].Cards[0] >= 48) // spliting aces
             {
@@ -42,7 +45,8 @@ namespace BlackjackStrategy.Methods.Commands
                 GetACard(newSeatId);
                 Decisions(newSeatId);
                 GetACard(seatId);
-                Decisions(seatId);
+                FirstDecision(seatId);
+                //Decisions(seatId);
             }
         }
         

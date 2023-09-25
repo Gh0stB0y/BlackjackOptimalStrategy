@@ -1,4 +1,5 @@
-﻿using BlackjackStrategy.GameModels;
+﻿using BlackjackStrategy.DataContainers;
+using BlackjackStrategy.GameModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,10 +13,15 @@ namespace BlackjackStrategy.Methods.Commands
         public static void LoseGame(int seatId,double moneyLost)
         {
             TableModel.Seats[seatId].SeatActive = false;
+            TableModel.Seats[seatId].WinningStreak = 0;
+            TableModel.Seats[seatId].Bet = 0;
+
             if (TableModel.Seats[seatId].SeatTakenByPlayer)
             {
-                PlayerModel.Bankroll += TableModel.Seats[seatId].Bet * (1-moneyLost);
+                PlayerModel.Bankroll += TableModel.Seats[seatId].Bet * (1 - moneyLost);
                 PlayerModel.Profit += TableModel.Seats[seatId].Bet * (1 - moneyLost);
+                Statistics.Loses++;
+                Statistics.Profit -= TableModel.Seats[seatId].Bet * (moneyLost);
             }
         }
     }

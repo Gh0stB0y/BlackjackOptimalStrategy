@@ -9,7 +9,7 @@ namespace BlackjackStrategy.Methods.Commands
 {
     public static partial class Commands
     {
-        public static void GenerateResults() 
+        public static void DefineAWinner()
         {
             int seatId = TableModel.Seats.Count - 1;
             do
@@ -17,39 +17,30 @@ namespace BlackjackStrategy.Methods.Commands
                 if (TableModel.Seats[seatId].SeatActive)
                 {
                     int whoWins;
-                    if (TableModel.DealerBusted)
-                        whoWins = 2;
+                    if (!TableModel.DealerBusted)
+                        whoWins=CompareValues(seatId);
                     else
-                        whoWins = CompareValues(seatId);
+                        whoWins = 2;
+                    
                     switch (whoWins)
                     {
                         case 0:
                             LoseGame(seatId, 1);
-                            Console.WriteLine("Lose");
                             break;
                         case 1:
                             PushGame(seatId);
-                            Console.WriteLine("Push");
                             break;
                         case 2:
                             if (CardsModel.CardValues[TableModel.Seats[seatId].Cards[0]] +
                                     CardsModel.CardValues[TableModel.Seats[seatId].Cards[1]] == 21)
-                            {
                                 PlayerBlackjack(seatId);
-                                Console.WriteLine("Blackjack");
-                            }
                             else
-                            {
                                 WinGame(seatId);
-                                Console.WriteLine("Win");
-                            }
                             break;
                     }
-                    TableModel.Seats[seatId].SeatActive = false;
                 }
                 seatId--;
             } while (seatId >= 0);
-            Console.ReadKey();
         }
     }
 }

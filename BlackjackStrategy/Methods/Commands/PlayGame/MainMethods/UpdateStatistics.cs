@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BlackjackStrategy.DataContainers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace BlackjackStrategy.Methods.Commands
     {
         public static void UpdateStatistics()
         {
-
+            Statistics.Winratio = Statistics.Wins/(Statistics.Wins + Statistics.Loses);
         }
     }
 }

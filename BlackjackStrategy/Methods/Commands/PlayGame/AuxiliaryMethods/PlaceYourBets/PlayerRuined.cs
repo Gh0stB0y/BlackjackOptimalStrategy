@@ -9,14 +9,11 @@ namespace BlackjackStrategy.Methods.Commands
 {
     public static partial class Commands
     {
-        public static void DealersTurn()
+        public static void PlayerRuined()
         {
-            if (!TableModel.SecondDealerCard)
-            {
-                GetADealerCard();
-                Queries.Queries.DisplayTableWithCards();
-            }
-            DealerDecisions();
+            Console.WriteLine("Player lost all of his money");
+            Console.ReadKey();
+            Environment.Exit(0);
         }
     }
 }

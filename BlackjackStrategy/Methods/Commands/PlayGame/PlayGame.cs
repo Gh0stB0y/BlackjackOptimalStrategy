@@ -11,20 +11,16 @@ namespace BlackjackStrategy.Methods.Commands
     public static partial class Commands
     {
         internal static void PlayGame()
-        {
+        {   
             PlaceYourBets();
-            //InitialCards();
-            Testing.Testing.InitialCardsTest();
-
-
-            Queries.Queries.DisplayTableWithCards();
-
-
-            Decisions();
-
+            InitialCards();
+            
+            Decisions();           
+            
             DealersTurn();
             GenerateResults();
             UpdateStatistics();
+            ClearTable();
             CheckRedCard();
         }
     }

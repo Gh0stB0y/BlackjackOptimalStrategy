@@ -18,13 +18,19 @@ namespace BlackjackStrategy.GameModels
         public static bool BotPlayers { get; set; } = false;
         //
 
-        //GAME PARAMETERS
+        //SEATS
         public static List<SeatModel> Seats = new();
+        //
+        //DEALER
         public static List<int>DealerCards { get; set; } = new();
         public static int DealerScore { get; set; } = 0;
+        public static int DealerAceCount { get; set; } = 0;
+        public static bool DealerBusted { get; set; } = false;
+        //
+        //CARDS
         public static Stack<int> ShoeCards { get; set; } = new();
         public static int CardsPlayed { get; set; } = 0;
         public static int RedCard { get; set; } = 0;
-        public static bool DealerBusted { get; set; } = false; 
+        //
     }
 }

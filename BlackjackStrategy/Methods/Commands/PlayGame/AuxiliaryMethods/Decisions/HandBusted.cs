@@ -9,14 +9,13 @@ namespace BlackjackStrategy.Methods.Commands
 {
     public static partial class Commands
     {
-        public static void DealersTurn()
+        public static bool HandBusted(int seatId)
         {
-            if (!TableModel.SecondDealerCard)
+            if(TableModel.Seats[seatId].Score > 21)
             {
-                GetADealerCard();
-                Queries.Queries.DisplayTableWithCards();
+                LoseGame(seatId, 1);
             }
-            DealerDecisions();
+            return TableModel.Seats[seatId].Score > 21;
         }
     }
 }
