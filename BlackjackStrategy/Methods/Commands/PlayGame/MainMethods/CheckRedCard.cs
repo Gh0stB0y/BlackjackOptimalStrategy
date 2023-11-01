@@ -14,8 +14,8 @@ namespace BlackjackStrategy.Methods.Commands
             if (TableModel.CardsPlayed >= TableModel.RedCard)
             {
                 ShuffleCards();
-                Console.WriteLine("Press any key to continue");
-                Console.ReadLine();
+                //Console.WriteLine("Shuffle complete, Press any key to continue");
+                //Console.ReadLine();
             }
        }
     }

@@ -10,16 +10,16 @@ namespace BlackjackStrategy.Methods.Commands
 {
     public static partial class Commands
     {
-        public static void WinGame(int seatId)
+        public static void WinGame(int seatId,double multiplier)
         {            
             TableModel.Seats[seatId].SeatActive = false;
             TableModel.Seats[seatId].WinningStreak++;
             if (TableModel.Seats[seatId].SeatTakenByPlayer)
             {
-                PlayerModel.Bankroll += TableModel.Seats[seatId].Bet * 2;
-                PlayerModel.Profit += TableModel.Seats[seatId].Bet * 2;
+                PlayerModel.Bankroll += TableModel.Seats[seatId].Bet * multiplier;
+                PlayerModel.Profit += TableModel.Seats[seatId].Bet * multiplier;
                 Statistics.Wins++;
-                Statistics.Profit += TableModel.Seats[seatId].Bet;
+                Statistics.Profit += TableModel.Seats[seatId].Bet*(multiplier-1);
             }
             
         }

@@ -25,7 +25,7 @@ namespace BlackjackStrategy.Methods.Commands
             do {
                 Console.Write("Bankroll (in units): ");
                 input = Console.ReadLine();
-            } while (!CheckInputInt(input, 1000));
+            } while (!CheckInputInt(input, 100000000));
             PlayerModel.Bankroll = int.Parse(input);
 
             do {

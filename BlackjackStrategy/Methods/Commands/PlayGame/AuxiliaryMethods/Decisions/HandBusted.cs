@@ -11,11 +11,12 @@ namespace BlackjackStrategy.Methods.Commands
     {
         public static bool HandBusted(int seatId)
         {
-            if(TableModel.Seats[seatId].Score > 21)
+            if (TableModel.Seats[seatId].Score > 21)
             {
                 LoseGame(seatId, 1);
+                return true;
             }
-            return TableModel.Seats[seatId].Score > 21;
+            else return false; 
         }
     }
 }

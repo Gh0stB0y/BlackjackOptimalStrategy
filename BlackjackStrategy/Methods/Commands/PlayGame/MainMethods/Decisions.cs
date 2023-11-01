@@ -15,15 +15,21 @@ namespace BlackjackStrategy.Methods.Commands
             int seatId = TableModel.Seats.Count - 1;
             do
             {
+                
                 if (TableModel.Seats[seatId].SeatActive)
                 {
-                    Queries.Queries.DisplayTableWithCards();
+                    //Console.WriteLine("new seat:");
+                    //Console.WriteLine("Bankroll" + PlayerModel.Bankroll);
                     FirstDecision(seatId);
-                    Queries.Queries.DisplayTableWithCards();
-                    
-                    while (!HandBusted(seatId) && TableModel.Seats[seatId].LastDecision == "Hit")
-                    {                    
-                        NextDecision(seatId);
+                    //Console.WriteLine("Initial score "+TableModel.Seats[seatId].Score);
+                    while ( TableModel.Seats[seatId].LastDecision == "Hit")
+                    {
+                        //Console.WriteLine("score in the loop: "+ TableModel.Seats[seatId].Score);
+                        if (!HandBusted(seatId))
+                        {
+                            NextDecision(seatId);
+                        }
+                        else break;
                     }                    
                 }
                 seatId--;

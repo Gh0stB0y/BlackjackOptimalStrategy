@@ -25,31 +25,32 @@ namespace BlackjackStrategy.Methods.Commands
                     {
                         case 0:
                             LoseGame(seatId, 1);
-                            Console.WriteLine("Lose");
+                            //Console.WriteLine("Lose");
                             break;
                         case 1:
                             PushGame(seatId);
-                            Console.WriteLine("Push");
+                            //Console.WriteLine("Push");
                             break;
                         case 2:
                             if (CardsModel.CardValues[TableModel.Seats[seatId].Cards[0]] +
                                     CardsModel.CardValues[TableModel.Seats[seatId].Cards[1]] == 21)
                             {
-                                PlayerBlackjack(seatId);
-                                Console.WriteLine("Blackjack");
+                                WinGame(seatId, 2.5);
+                                //Console.WriteLine("Blackjack");
                             }
                             else
                             {
-                                WinGame(seatId);
-                                Console.WriteLine("Win");
+                                WinGame(seatId,2);
+                                //Console.WriteLine("Win");
                             }
                             break;
                     }
                     TableModel.Seats[seatId].SeatActive = false;
+                    //Console.WriteLine(PlayerModel.Bankroll);
                 }
                 seatId--;
             } while (seatId >= 0);
-            Console.ReadKey();
+            //Console.ReadKey();
         }
     }
 }

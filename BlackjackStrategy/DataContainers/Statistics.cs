@@ -12,5 +12,7 @@ namespace BlackjackStrategy.DataContainers
         public static int Loses { get; set; } = 0;
         public static double Winratio { get; set; } = 0;
         public static double Profit { get; set; } = 0;
+        public static int fuckups { get; set; } = 0;
+        public static int Pushes { get; set; }
     }
 }

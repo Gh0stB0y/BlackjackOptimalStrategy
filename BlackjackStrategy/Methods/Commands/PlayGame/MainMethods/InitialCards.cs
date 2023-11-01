@@ -16,7 +16,10 @@ namespace BlackjackStrategy.Methods.Commands
                 int seatId=TableModel.Seats.Count-1;
                 do
                 {
-                   if (TableModel.Seats[seatId].SeatActive)GetACard(seatId);
+                    if (TableModel.Seats[seatId].SeatActive)
+                    {
+                        GetACard(seatId);
+                    }
                    seatId--;
                 } while (seatId >= 0);
 

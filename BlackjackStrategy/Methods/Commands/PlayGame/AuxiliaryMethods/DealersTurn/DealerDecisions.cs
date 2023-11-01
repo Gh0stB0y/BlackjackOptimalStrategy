@@ -20,6 +20,10 @@ namespace BlackjackStrategy.Methods.Commands
                         DealerHit();
                         Queries.Queries.DisplayTableWithCards();
                     }
+                    else
+                    {
+                        break;
+                    }
                 }
                 else //16 or less
                 {

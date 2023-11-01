@@ -13,15 +13,13 @@ namespace BlackjackStrategy.Methods.Commands
         internal static void PlayGame()
         {   
             PlaceYourBets();
-            InitialCards();
-            
+            InitialCards();          
             Decisions();           
-            
             DealersTurn();
-            GenerateResults();
-            UpdateStatistics();
+            GenerateResults(); 
+            ///UpdateStatistics();
             ClearTable();
-            CheckRedCard();
+            CheckRedCard(); 
         }
     }
 }

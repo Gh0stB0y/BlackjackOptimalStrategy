@@ -12,7 +12,7 @@ namespace BlackjackStrategy.Methods.Queries
     {   
         public static void DisplayTableWithCards()
         {
-            int howManySpaces = 30;
+            /*int howManySpaces = 30;
             string dealerCards = string.Empty;
             string dealerScore = TableModel.DealerScore.ToString();
             string tabs = new string(' ',TableModel.Seats.Count* howManySpaces /2- howManySpaces/2);
@@ -42,7 +42,7 @@ namespace BlackjackStrategy.Methods.Queries
             string seatsActive = string.Empty;
             string lastDecisions = string.Empty;
             string scores = string.Empty;
-            string firstLine = "Bankroll: " + PlayerModel.Bankroll + ", Profit: " + Statistics.Profit;
+            string firstLine = "Bankroll: " + PlayerModel.Bankroll + ", Profit: " + PlayerModel.Bankroll;
             string winningStreaks = string.Empty;
             foreach (var Seat in TableModel.Seats)
             {
@@ -64,7 +64,7 @@ namespace BlackjackStrategy.Methods.Queries
             }
 
             Console.Clear();
-            Console.WriteLine(firstLine);
+            //Console.WriteLine(firstLine);
             Console.Write(tabs); 
             Console.WriteLine("Dealer cards");
             Console.Write(tabs);
@@ -77,7 +77,7 @@ namespace BlackjackStrategy.Methods.Queries
             Console.WriteLine(lastDecisions);
             Console.WriteLine(scores);
 
-            Console.ReadKey();
+            //Console.ReadKey();*/
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using BlackjackStrategy.GameModels;
+﻿using BlackjackStrategy.DataContainers;
+using BlackjackStrategy.GameModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,12 @@ namespace BlackjackStrategy.Methods.Commands
         public static void NextDecision(int seatId)
         {               
             Queries.Queries.DisplayTableWithCards();
+            //Console.WriteLine("score in the method: " + TableModel.Seats[seatId].Score);
+            if (TableModel.Seats[seatId].Score > 21)
+            {
+                TableModel.Seats[seatId].Score = 21;
+                Statistics.fuckups++;
+            }
             int decision = ManageMoreCards(seatId);
             switch (decision)
             {

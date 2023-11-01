@@ -16,50 +16,50 @@ namespace BlackjackStrategy.DecisionMaking
         //4 - double/stand
         //5 - split
         //6 - surrender
-        public static readonly List<List<int>> HardChart = new List<List<int>>() 
+        public static readonly int[,]HardChart =
         {         
-            new List<int>(){ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//player's 5
-            new List<int>(){ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//player's 6
-            new List<int>(){ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//player's 7
-            new List<int>(){ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//player's 8
-            new List<int>(){ 1, 3, 3, 3, 3, 1, 1, 1, 1, 1 },//player's 9
-            new List<int>(){ 3, 3, 3, 3, 3, 3, 3, 3, 1, 1 },//player's 10
-            new List<int>(){ 3, 3, 3, 3, 3, 3, 3, 3, 3, 1 },//player's 11
-            new List<int>(){ 1, 1, 2, 2, 2, 1, 1, 1, 1, 1 },//player's 12
-            new List<int>(){ 2, 2, 2, 2, 2, 1, 1, 1, 1, 1 },//player's 13
-            new List<int>(){ 2, 2, 2, 2, 2, 1, 1, 1, 1, 1 },//player's 14
-            new List<int>(){ 2, 2, 2, 2, 2, 1, 1, 1, 6, 1 },//player's 15
-            new List<int>(){ 2, 2, 2, 2, 2, 1, 1, 6, 6, 6 },//player's 16
-            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 17
-            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 18
-            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 19
-            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 20
-            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 } //player's 21
+            { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//player's 5
+            { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//player's 6
+            { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//player's 7
+            { 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 },//player's 8
+            { 1, 3, 3, 3, 3, 1, 1, 1, 1, 1 },//player's 9
+            { 3, 3, 3, 3, 3, 3, 3, 3, 1, 1 },//player's 10
+            { 3, 3, 3, 3, 3, 3, 3, 3, 3, 1 },//player's 11
+            { 1, 1, 2, 2, 2, 1, 1, 1, 1, 1 },//player's 12
+            { 2, 2, 2, 2, 2, 1, 1, 1, 1, 1 },//player's 13
+            { 2, 2, 2, 2, 2, 1, 1, 1, 1, 1 },//player's 14
+            { 2, 2, 2, 2, 2, 1, 1, 1, 6, 1 },//player's 15
+            { 2, 2, 2, 2, 2, 1, 1, 6, 6, 6 },//player's 16
+            { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 17
+            { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 18
+            { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 19
+            { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's 20
+            { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 } //player's 21
         };
-        public static readonly List<List<int>> SoftChart = new List<List<int>>()
+        public static readonly int[,] SoftChart =
         {
-            new List<int>(){ 1, 1, 1, 3, 3, 1, 1, 1, 1, 1 },//player's soft 13 / A2
-            new List<int>(){ 1, 1, 1, 3, 3, 1, 1, 1, 1, 1 },//player's soft 14 / A3
-            new List<int>(){ 1, 1, 3, 3, 3, 1, 1, 1, 1, 1 },//player's soft 15 / A4
-            new List<int>(){ 1, 1, 3, 3, 3, 1, 1, 1, 1, 1 },//player's soft 16 / A5
-            new List<int>(){ 1, 3, 3, 3, 3, 1, 1, 1, 1, 1 },//player's soft 17 / A6
-            new List<int>(){ 2, 4, 4, 4, 4, 2, 2, 1, 1, 1 },//player's soft 18 / A7
-            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's soft 19 / A8
-            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's soft 20 / A9
-            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's soft 21 
+            { 1, 1, 1, 3, 3, 1, 1, 1, 1, 1 },//player's soft 13 / A2
+            { 1, 1, 1, 3, 3, 1, 1, 1, 1, 1 },//player's soft 14 / A3
+            { 1, 1, 3, 3, 3, 1, 1, 1, 1, 1 },//player's soft 15 / A4
+            { 1, 1, 3, 3, 3, 1, 1, 1, 1, 1 },//player's soft 16 / A5
+            { 1, 3, 3, 3, 3, 1, 1, 1, 1, 1 },//player's soft 17 / A6
+            { 2, 4, 4, 4, 4, 2, 2, 1, 1, 1 },//player's soft 18 / A7
+            { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's soft 19 / A8
+            { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's soft 20 / A9
+            { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//player's soft 21 
         };
-        public static readonly List<List<int>> PairsChart = new List<List<int>>()
+        public static readonly int[,] PairsChart =
         {
-            new List<int>(){ 5, 5, 5, 5, 5, 5, 1, 1, 1, 1 },//22
-            new List<int>(){ 5, 5, 5, 5, 5, 5, 1, 1, 1, 1 },//33
-            new List<int>(){ 1, 1, 1, 5, 5, 1, 1, 1, 1, 1 },//44
-            new List<int>(){ 3, 3, 3, 3, 3, 3, 3, 3, 1, 1 },//55
-            new List<int>(){ 5, 5, 5, 5, 5, 1, 1, 1, 1, 1 },//66
-            new List<int>(){ 5, 5, 5, 5, 5, 5, 1, 1, 1, 1 },//77
-            new List<int>(){ 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 },//88
-            new List<int>(){ 5, 5, 5, 5, 5, 2, 5, 5, 2, 2 },//99
-            new List<int>(){ 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//10 10
-            new List<int>(){ 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 },//AA
+            { 5, 5, 5, 5, 5, 5, 1, 1, 1, 1 },//22
+            { 5, 5, 5, 5, 5, 5, 1, 1, 1, 1 },//33
+            { 1, 1, 1, 5, 5, 1, 1, 1, 1, 1 },//44
+            { 3, 3, 3, 3, 3, 3, 3, 3, 1, 1 },//55
+            { 5, 5, 5, 5, 5, 1, 1, 1, 1, 1 },//66
+            { 5, 5, 5, 5, 5, 5, 1, 1, 1, 1 },//77
+            { 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 },//88
+            { 5, 5, 5, 5, 5, 2, 5, 5, 2, 2 },//99
+            { 2, 2, 2, 2, 2, 2, 2, 2, 2, 2 },//10 10
+            { 5, 5, 5, 5, 5, 5, 5, 5, 5, 5 },//AA
         };
 
     }

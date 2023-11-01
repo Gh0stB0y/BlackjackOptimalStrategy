@@ -18,7 +18,7 @@ namespace BlackjackStrategy.Methods.Commands
                     CardsModel.CardValues[TableModel.Seats[seatId].Cards[1]])
             {
                 int row = (TableModel.Seats[seatId].Score / 2)-2;
-                return CardDecision.PairsChart[row][DealerCardVal-2];
+                return CardDecision.PairsChart[row, DealerCardVal - 2];
             }
             //CheckAce
             else if (CardsModel.CardValues[TableModel.Seats[seatId].Cards[0]] == 11||
@@ -26,13 +26,13 @@ namespace BlackjackStrategy.Methods.Commands
             {
                 //TableModel.Seats[seatId].AceCount++;
                 int row = TableModel.Seats[seatId].Score - 13;
-                return CardDecision.SoftChart[row][DealerCardVal - 2];
+                return CardDecision.SoftChart[row, DealerCardVal - 2];
             }
             //No Ace no Pair
             else 
             {
                 int row = TableModel.Seats[seatId].Score - 5;
-                return CardDecision.HardChart[row][DealerCardVal - 2];
+                return CardDecision.HardChart[row, DealerCardVal - 2];
             }
 
         }

@@ -11,7 +11,8 @@ namespace BlackjackStrategy.Methods.Commands
     {
         public static void UpdateStatistics()
         {
-            Statistics.Winratio = Statistics.Wins/(Statistics.Wins + Statistics.Loses);
+            //Statistics.Winratio = Statistics.Wins/(Statistics.Wins + Statistics.Loses);
+            Console.WriteLine($"Wins: {Statistics.Wins}, Loses: {Statistics.Loses}, Pushes: {Statistics.Pushes}, Fuckups: {Statistics.fuckups}");
         }
     }
 }

@@ -9,10 +9,14 @@ internal class Program
         Console.WriteLine("Welcome to my program :) Please set up game parameters");
         Commands.SetInitialParameters();
         Queries.DiplayTableNoCards();
-        if (!TableModel.CsmEnabled) Commands.ShuffleCards();
+        if (TableModel.CsmEnabled == false) Commands.ShuffleCards();
 
-        for (int i = 0; i < 5; i++)
+        for (int i = 0; i < PlayerModel.GamesPlayed; i++)
+        {
+            //Queries.DisplayProgress(i);
             Commands.PlayGame();
-
+        }
+            
+        Commands.UpdateStatistics();
     }
 }

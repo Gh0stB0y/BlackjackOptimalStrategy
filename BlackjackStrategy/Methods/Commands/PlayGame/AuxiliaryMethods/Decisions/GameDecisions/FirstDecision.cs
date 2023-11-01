@@ -15,7 +15,7 @@ namespace BlackjackStrategy.Methods.Commands
             else
             {
                 int decision = ManageFirstTwoCards(seatId);
-                if (decision == 6 && !TableModel.Surrender) decision = 2;
+                if (decision == 6 && !TableModel.Surrender) decision = 1;
                 switch (decision)
                 {
                     case 1:

@@ -18,12 +18,16 @@ namespace BlackjackStrategy.Methods.Commands
             {
                 //TableModel.Seats[seatId].AceCount++;
                 int row = TableModel.Seats[seatId].Score - 13;
-                return CardDecision.SoftChart[row][DealerCardVal - 2];
+                return CardDecision.SoftChart[row,DealerCardVal - 2];
             }
             else
             {
                 int row = TableModel.Seats[seatId].Score - 5;
-                return CardDecision.HardChart[row][DealerCardVal - 2];
+
+                //Console.WriteLine("row "+row);
+                //Console.WriteLine("dealer val "+DealerCardVal);
+                int returnObj=CardDecision.HardChart[row,DealerCardVal - 2];
+                return returnObj;
             }
         }
 

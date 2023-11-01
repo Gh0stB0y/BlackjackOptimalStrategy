@@ -45,7 +45,7 @@ namespace BlackjackStrategy.Methods.Commands
                 TableModel.CardsPlayed = 0;
                 double RedCardPercent = RandomObj.Next(600, 850) * 52 * TableModel.DecksNumber / 1000;// * 52 * NumberOfDecks;
                 TableModel.RedCard = (int)Math.Floor(RedCardPercent);
-                Console.WriteLine("RedCard: " + TableModel.RedCard);
+                //Console.WriteLine("RedCard: " + TableModel.RedCard);
             }
         }
     }

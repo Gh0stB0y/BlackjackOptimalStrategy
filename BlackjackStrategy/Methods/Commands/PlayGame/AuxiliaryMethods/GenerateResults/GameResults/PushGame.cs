@@ -1,4 +1,5 @@
-﻿using BlackjackStrategy.GameModels;
+﻿using BlackjackStrategy.DataContainers;
+using BlackjackStrategy.GameModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,6 +17,7 @@ namespace BlackjackStrategy.Methods.Commands
             {
                 PlayerModel.Bankroll += TableModel.Seats[seatId].Bet * 1;
                 PlayerModel.Profit += TableModel.Seats[seatId].Bet * 1;
+                Statistics.Pushes++;
             }
         }
     }

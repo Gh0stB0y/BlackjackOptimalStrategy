@@ -9,7 +9,7 @@ namespace BlackjackStrategy.Methods.Commands
 {
     public static partial class Commands
     {
-        public static void DefineAWinner()
+        /*public static void DefineAWinner()
         {
             int seatId = TableModel.Seats.Count - 1;
             do
@@ -35,12 +35,12 @@ namespace BlackjackStrategy.Methods.Commands
                                     CardsModel.CardValues[TableModel.Seats[seatId].Cards[1]] == 21)
                                 PlayerBlackjack(seatId);
                             else
-                                WinGame(seatId);
+                                WinGame(seatId, 2);
                             break;
                     }
                 }
                 seatId--;
             } while (seatId >= 0);
-        }
+        }*/
     }
 }
