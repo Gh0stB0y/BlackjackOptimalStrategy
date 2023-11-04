@@ -1,6 +1,6 @@
 ﻿using BlackjackStrategy.DataContainers;
 using BlackjackStrategy.GameModels;
-using BlackjackStrategy.GeneticAlgorythm;
+using BlackjackStrategy.GeneticAlgorythm.Interfaces;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BlackjackStrategy.Methods.Commands.Generations.Iterations
+namespace BlackjackStrategy.Methods.Commands
 {
     public static class Iterations
     {
@@ -19,15 +19,15 @@ namespace BlackjackStrategy.Methods.Commands.Generations.Iterations
                 PlayerModel.Bankroll = PlayerModel.InitialBankroll;
                 Statistics.ClearStats();
                 Console.WriteLine($"Generation {generationNumber}, iteration {i}");
-                string bankrollDataPath = WriteData.GeneratePath(generationNumber.ToString());
+                //string bankrollDataPath = WriteData.GeneratePath(generationNumber.ToString());
                 for (int j = 0; j < PlayerModel.MaxGamesPlayed; j++)
                 {
                     Commands.PlayGame();
-                    if (j % 100 == 0)
+                    /*if (j % 100 == 0)
                     {
                         WriteData.WriteDataToFile(new string[] { j.ToString(), PlayerModel.Bankroll.ToString() },
                                                     bankrollDataPath);
-                    }
+                    }*/
                     if (PlayerModel.Busted) break;
                 }
                 Commands.UpdateStatistics();

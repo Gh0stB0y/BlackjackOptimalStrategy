@@ -3,21 +3,20 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BlackjackStrategy.GeneticAlgorythm.Interfaces;
 
 namespace BlackjackStrategy.GeneticAlgorythm
 {
     public class GeneticAlgorythm : IGeneticAlgorythm, IGeneticCharts
     {
-        public double FinalScore { get; private set; }        
+        public double FinalScore { get; private set; }
         public int Generations { get; private set; }
         public int Iterations { get; private set; }
         public int PopulationSize { get; private set; }
-        public List<List<int>> CurrentPopulation { get; set; }
-        public List<int> EliteBetPattern { get; set; }
-        public List<int> MutationFactor { get; set; }        
-        public void CreatePopulation() { }
-        public void ChooseEliteIndividual() { }
-        public void DrawPairs() { }
+        public List<ISpecimenModel> CurrentPopulation { get; set; }
+        public ISpecimenModel EliteSpecimen { get; set; }
+        public List<int> MutationFactor { get; set; }
+        public void ChooseEliteSpecimen() { }
         public void CompareIndividuals() { }
         public void DrawParents() { }
         public void MakeChildren() { }
@@ -33,11 +32,31 @@ namespace BlackjackStrategy.GeneticAlgorythm
 
         public GeneticAlgorythm()
         {
-            Generations = 10;
-            Iterations = 500;            
+            Generations = 1;
+            Iterations = 500;
             PopulationSize = 10;
-            EliteBetPattern = new();
-            MutationFactor = new() {0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+            CurrentPopulation = new List<ISpecimenModel>();
+            EliteSpecimen = Factory.CreateSpecimenModelInstance(new List<int>() {1});
+            MutationFactor = new() { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0 };
+            GenerationBestScore = new List<int>();
+        }
+
+        public void CreatePopulation()
+        {
+            ICreatePopulation _createPopulation = Factory.CreatePopulationMethod();
+
+            _createPopulation.InitialUnit = 1;
+            _createPopulation.SystemLength = 6;
+            _createPopulation.MaxUnit = 5;
+            _createPopulation.MinUnit = 1;
+            CurrentPopulation.Clear();
+            List<List<int>> generatedLists = new List<List<int>>();    
+            
+            generatedLists = _createPopulation.CollectBettingSystems(PopulationSize);
+            foreach (List<int> bettingSystem in generatedLists)
+            {
+                CurrentPopulation.Add(Factory.CreateSpecimenModelInstance(bettingSystem));
+            }
         }
     }
 }

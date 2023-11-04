@@ -1,6 +1,7 @@
 ﻿using BlackjackStrategy.DataContainers;
 using BlackjackStrategy.GameModels;
 using BlackjackStrategy.GeneticAlgorythm;
+using BlackjackStrategy.GeneticAlgorythm.Interfaces;
 using BlackjackStrategy.Methods.Commands;
 using BlackjackStrategy.Methods.Commands.Generations.Iterations;
 using BlackjackStrategy.Methods.Queries;
@@ -14,23 +15,38 @@ namespace BlackjackStrategy
             Console.WriteLine("Welcome to my program :) Please set up game parameters");
             Commands.SetInitialParameters();
             Queries.DiplayTableNoCards();
-            if (TableModel.CsmEnabled == false) Commands.ShuffleCards();
 
-            IGeneticAlgorythm genAlgorythm = Factory.CreateAlgorythmInstance();
-            genAlgorythm.CreatePopulation();
+            IGeneticAlgorythm _genAlgorythm = Factory.CreateAlgorythmInstance();
+            _genAlgorythm.CreatePopulation();
 
-            int generationNumber = 1;
-            foreach (var subject in genAlgorythm.CurrentPopulation)
+            foreach(var specimen in _genAlgorythm.CurrentPopulation)
             {
+                foreach(var item in specimen.BettingSystem)
+                {
+                    Console.Write(item+"/");
+                }
+                Console.WriteLine();
+            }
+
+            /*for(int i = 0; i < _genAlgorythm.Generations; i++)
+            {
+                int generationNumber = i;
+                foreach (var specimen in _genAlgorythm.CurrentPopulation)
+                {
+                    //KOD OBLICZAJACY PROFIT Z DANEGO OSOBNIKA
+                    SpecimenScore.CalculateSpecimenScore(_genAlgorythm, generationNumber, specimen);
+                    //
+                }
+                _genAlgorythm.ChooseEliteSpecimen();
+                _genAlgorythm.CompareIndividuals();
+                _genAlgorythm.DrawParents();
+                _genAlgorythm.MakeChildren();
 
             }
-            //KOD ZWRACAJACY PROFIT Z DANEGO OSOBNIKA
-            Iterations.PerformIterations(genAlgorythm, generationNumber);
-            double IndividualScore = Iterations.CalculateOptimizationParameter();
-            Console.WriteLine($"Average Profit: {IndividualScore}");
-            //
+            _genAlgorythm.AlgorythmSummary();*/
         }
 
         
+
     }
 }
