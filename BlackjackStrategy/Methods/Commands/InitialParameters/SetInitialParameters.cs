@@ -16,6 +16,8 @@ namespace BlackjackStrategy.Methods.Commands
             SetSeatsParameters(TableModel.SeatsNumber);
             SetPlayerParameters();
             if (TableModel.BotPlayers == true) AssignBotsToSeats();
+            PlayerModel.InitialBankroll = PlayerModel.Bankroll; 
+            
         }
     }
 }

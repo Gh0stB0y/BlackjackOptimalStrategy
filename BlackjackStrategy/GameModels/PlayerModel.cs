@@ -13,7 +13,9 @@ namespace BlackjackStrategy.GameModels
         public static List<int> BettingSystem = new();
         public static bool CountingCards { get; set; } = false;
         public static double Bankroll { get; set; } = 50; //in units, not dollars 
-        public static double Profit { get; set; } = 0;
-        public static long GamesPlayed { get; set; } = 10 ^ 8;
+        public static double InitialBankroll { get; set; } = 50;
+        public static long MaxGamesPlayed { get; set; } = 10 ^ 8;
+        public static long NumberOfGamesPlayed { get; set; } = 0;
+        public static bool Busted { get; set; } = false;
     }
 }

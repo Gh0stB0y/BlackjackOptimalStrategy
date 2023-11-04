@@ -1,22 +1,36 @@
-﻿using BlackjackStrategy.GameModels;
+﻿using BlackjackStrategy.DataContainers;
+using BlackjackStrategy.GameModels;
+using BlackjackStrategy.GeneticAlgorythm;
 using BlackjackStrategy.Methods.Commands;
+using BlackjackStrategy.Methods.Commands.Generations.Iterations;
 using BlackjackStrategy.Methods.Queries;
 
-internal class Program
+namespace BlackjackStrategy
 {
-    private static void Main(string[] args)
+    internal class Program
     {
-        Console.WriteLine("Welcome to my program :) Please set up game parameters");
-        Commands.SetInitialParameters();
-        Queries.DiplayTableNoCards();
-        if (TableModel.CsmEnabled == false) Commands.ShuffleCards();
-
-        for (int i = 0; i < PlayerModel.GamesPlayed; i++)
+        private static void Main(string[] args)
         {
-            //Queries.DisplayProgress(i);
-            Commands.PlayGame();
+            Console.WriteLine("Welcome to my program :) Please set up game parameters");
+            Commands.SetInitialParameters();
+            Queries.DiplayTableNoCards();
+            if (TableModel.CsmEnabled == false) Commands.ShuffleCards();
+
+            IGeneticAlgorythm genAlgorythm = Factory.CreateAlgorythmInstance();
+            genAlgorythm.CreatePopulation();
+
+            int generationNumber = 1;
+            foreach (var subject in genAlgorythm.CurrentPopulation)
+            {
+
+            }
+            //KOD ZWRACAJACY PROFIT Z DANEGO OSOBNIKA
+            Iterations.PerformIterations(genAlgorythm, generationNumber);
+            double IndividualScore = Iterations.CalculateOptimizationParameter();
+            Console.WriteLine($"Average Profit: {IndividualScore}");
+            //
         }
-            
-        Commands.UpdateStatistics();
+
+        
     }
 }

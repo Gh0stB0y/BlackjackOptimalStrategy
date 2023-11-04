@@ -1,4 +1,5 @@
-﻿using BlackjackStrategy.GameModels;
+﻿using BlackjackStrategy.DataContainers;
+using BlackjackStrategy.GameModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,12 +28,13 @@ namespace BlackjackStrategy.Methods.Commands
                 input = Console.ReadLine();
             } while (!CheckInputInt(input, 100000000));
             PlayerModel.Bankroll = int.Parse(input);
+            Statistics.InitialBankroll = PlayerModel.Bankroll;
 
             do {
                 Console.Write("Games played: ");
                 input = Console.ReadLine();
             } while (!CheckInputInt(input, 100000000));
-            PlayerModel.GamesPlayed = int.Parse(input);
+            PlayerModel.MaxGamesPlayed = int.Parse(input);
 
             do {
                 Console.Write("Which seats (ID) are taken by player (split IDs with delimiter /, e.g. 1/2/34/1/4 ): ");

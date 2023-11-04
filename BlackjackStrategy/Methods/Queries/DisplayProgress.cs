@@ -11,7 +11,7 @@ namespace BlackjackStrategy.Methods.Queries
     {
         public static void DisplayProgress(int i)
         {
-            double progress = (double)i / PlayerModel.GamesPlayed*100;
+            double progress = (double)i / PlayerModel.MaxGamesPlayed*100;
 
             Console.WriteLine("Progress: " + progress.ToString("0.000"));                
         }

@@ -18,6 +18,7 @@ namespace BlackjackStrategy.GameModels
         public int AceCount { get; set; } = 0;
 
         public int WinningStreak { get; set; } = 0;
+        public int LosingStreak { get; set; } = 0;
         public int Bet { get; set; } = 1;
 
         public bool AdditionalSeat { get; set; } = false;

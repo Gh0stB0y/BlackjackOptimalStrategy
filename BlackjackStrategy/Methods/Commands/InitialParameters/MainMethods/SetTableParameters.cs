@@ -55,12 +55,13 @@ namespace BlackjackStrategy.Methods.Commands
             if (input.ToLower() == "y") TableModel.SecondDealerCard = true;
             else TableModel.SecondDealerCard = false;
 
-            do {
+            /*do {
                 Console.Write("Bot players enabled (Y/N): ");
                 input = Console.ReadLine();
             } while (!CheckInputBool(input));
             if (input.ToLower() == "y") TableModel.BotPlayers = true;
-            else TableModel.BotPlayers = false;
+            else TableModel.BotPlayers = false;*/
+            TableModel.BotPlayers = false;
         }
     }
 }
