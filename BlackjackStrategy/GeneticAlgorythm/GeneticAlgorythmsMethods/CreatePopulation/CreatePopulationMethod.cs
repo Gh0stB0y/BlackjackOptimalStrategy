@@ -9,7 +9,7 @@ namespace BlackjackStrategy.GeneticAlgorythm.GeneticAlgorythmsMethods
 {
     internal class CreatePopulationMethod : ICreatePopulation
     {
-        public int InitialUnit {get; set;} = 0;
+        public int InitialUnit { get; set; } = 0;
 
         public int SystemLength { get; set; } = 0;
 
@@ -21,9 +21,9 @@ namespace BlackjackStrategy.GeneticAlgorythm.GeneticAlgorythmsMethods
         {
             List<int> bettingSystem = new List<int>() { InitialUnit };
             Random RNGmachine = new Random();
-            for(int i = 0;i<SystemLength-1;i++)
+            for (int i = 0; i < SystemLength - 1; i++)
             {
-                bettingSystem.Add(RNGmachine.Next(MinUnit,MaxUnit+1));
+                bettingSystem.Add(RNGmachine.Next(MinUnit, MaxUnit + 1));
             }
 
             return bettingSystem;
@@ -37,16 +37,13 @@ namespace BlackjackStrategy.GeneticAlgorythm.GeneticAlgorythmsMethods
                 do
                 {
                     bettingSystem.Clear();
-                    bettingSystem =GenerateBettingSystem();
+                    bettingSystem = GenerateBettingSystem();
                 } while (lists.Contains(bettingSystem));
 
                 lists.Add(bettingSystem);
             }
             return lists;
         }
-
-
-
         public CreatePopulationMethod() { }
     }
 }

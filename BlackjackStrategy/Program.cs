@@ -19,31 +19,26 @@ namespace BlackjackStrategy
             IGeneticAlgorythm _genAlgorythm = Factory.CreateAlgorythmInstance();
             _genAlgorythm.CreatePopulation();
 
-            foreach(var specimen in _genAlgorythm.CurrentPopulation)
-            {
-                foreach(var item in specimen.BettingSystem)
-                {
-                    Console.Write(item+"/");
-                }
-                Console.WriteLine();
-            }
-
-            /*for(int i = 0; i < _genAlgorythm.Generations; i++)
+            for (int i = 0; i < _genAlgorythm.Generations; i++)
             {
                 int generationNumber = i;
+                int specimenNumber = 0;
                 foreach (var specimen in _genAlgorythm.CurrentPopulation)
                 {
                     //KOD OBLICZAJACY PROFIT Z DANEGO OSOBNIKA
-                    SpecimenScore.CalculateSpecimenScore(_genAlgorythm, generationNumber, specimen);
+                    SpecimenScore.CalculateSpecimenScore(_genAlgorythm, generationNumber, specimenNumber, specimen);
+                    specimenNumber++;
                     //
+                    Console.WriteLine($"Generation {generationNumber}/{_genAlgorythm.Generations}, specimen {specimenNumber}/{_genAlgorythm.CurrentPopulation.Count}");
                 }
+                _genAlgorythm.WriteScoresToFile();
                 _genAlgorythm.ChooseEliteSpecimen();
-                _genAlgorythm.CompareIndividuals();
-                _genAlgorythm.DrawParents();
-                _genAlgorythm.MakeChildren();
-
+                _genAlgorythm.NormalizeScore();                
+                _genAlgorythm.Selection();
+                _genAlgorythm.MakeChildren(generationNumber);
+                Console.WriteLine();
             }
-            _genAlgorythm.AlgorythmSummary();*/
+            _genAlgorythm.AlgorythmSummary();
         }
 
         

@@ -4,7 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using BlackjackStrategy.GeneticAlgorythm.GeneticAlgorythmsMethods;
+using BlackjackStrategy.GeneticAlgorythm.GeneticAlgorythmsMethods.MakePairs;
+using BlackjackStrategy.GeneticAlgorythm.GeneticAlgorythmsMethods.Selection;
+using BlackjackStrategy.GeneticAlgorythm.GeneticAlgorythmsMethods.WriteScoresToFile;
 using BlackjackStrategy.GeneticAlgorythm.Interfaces;
+
 
 namespace BlackjackStrategy.GeneticAlgorythm
 {
@@ -21,6 +25,22 @@ namespace BlackjackStrategy.GeneticAlgorythm
         public static ISpecimenModel CreateSpecimenModelInstance(List<int> bettingSystem)
         {
             return new SpecimenModel(bettingSystem);
+        }
+        public static IWriteScoresToFile CreateWriteScoresToFileMethod()
+        {
+            return new WriteScoresToFileMethod1();
+        }
+        public static INormalize CreateNormalizeMethod()
+        {
+            return new NormalizeMethod();
+        }
+        public static ISelection CreateSelectionMethod()
+        {
+            return new TournamentSelection();
+        }
+        public static IMakeChildren CreateMakeChildrenMethod()
+        {
+            return new MakeChildrenMethod1();
         }
     }
 }

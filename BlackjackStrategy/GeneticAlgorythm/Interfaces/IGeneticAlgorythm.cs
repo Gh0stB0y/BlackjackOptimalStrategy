@@ -2,18 +2,20 @@
 {
     public interface IGeneticAlgorythm
     {
-        double FinalScore { get; }
+        ISpecimenModel FinalSpecimen { get; }
         int Generations { get; }
         int Iterations { get; }
         int PopulationSize { get; }
         List<ISpecimenModel> CurrentPopulation { get; } // List of persons, in this case betting system
         ISpecimenModel EliteSpecimen { get; }
+        List<ISpecimenModel> Parents { get; }
         List<int> MutationFactor { get; }
+        void WriteScoresToFile();
         void CreatePopulation();
+        void NormalizeScore();
         void ChooseEliteSpecimen();
-        void CompareIndividuals();
-        void DrawParents();
-        void MakeChildren();
+        void Selection();
+        void MakeChildren(int generationNumber);
         void AlgorythmSummary();
     }
 }

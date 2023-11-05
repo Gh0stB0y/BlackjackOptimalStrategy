@@ -45,10 +45,10 @@ namespace BlackjackStrategy.Methods.Commands
             return path;
         }
 
-        public static void WriteDataFromIteration(string generationNumber, string[] parameters)
+        public static void WriteDataFromIteration(string generationNumber,string specimenNumber, string[] parameters)
         {
             //ramka: wins loses pushes winratio profit 
-            string[] pathParts = { "Generation" + generationNumber, "results", ".csv" };
+            string[] pathParts = { "Generation" + generationNumber + "Specimen" + specimenNumber, "results", ".csv" };
             string path = string.Concat(pathParts);
             if (!File.Exists(path))
             {

@@ -12,13 +12,13 @@ namespace BlackjackStrategy.Methods.Commands
 {
     public static class Iterations
     {
-        public static void PerformIterations(IGeneticAlgorythm genAlgorythm, int generationNumber)
+        public static void PerformIterations(IGeneticAlgorythm genAlgorythm, int generationNumber,int specimenNumber)
         {
             for (int i = 0; i < genAlgorythm.Iterations; i++)
             {
                 PlayerModel.Bankroll = PlayerModel.InitialBankroll;
                 Statistics.ClearStats();
-                Console.WriteLine($"Generation {generationNumber}, iteration {i}");
+                //Console.WriteLine($"Generation {generationNumber}, iteration {i}");
                 //string bankrollDataPath = WriteData.GeneratePath(generationNumber.ToString());
                 for (int j = 0; j < PlayerModel.MaxGamesPlayed; j++)
                 {
@@ -31,10 +31,10 @@ namespace BlackjackStrategy.Methods.Commands
                     if (PlayerModel.Busted) break;
                 }
                 Commands.UpdateStatistics();
-                WriteData.WriteDataFromIteration(generationNumber.ToString(),
+                /*WriteData.WriteDataFromIteration(generationNumber.ToString(), specimenNumber.ToString(),
                                                     new string[] {Statistics.Wins.ToString(), Statistics.Loses.ToString(),
                                                                     Statistics.Pushes.ToString(), Statistics.Winratio.ToString(),
-                                                                        Statistics.Profit.ToString()});
+                                                                        Statistics.Profit.ToString()});*/
                 Statistics.ProfitFromIterations.Add(Statistics.Profit);
 
             }

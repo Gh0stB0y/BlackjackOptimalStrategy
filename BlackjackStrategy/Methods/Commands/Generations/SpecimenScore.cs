@@ -10,12 +10,12 @@ namespace BlackjackStrategy.Methods.Commands
 {
     public static class SpecimenScore
     {
-        public static void CalculateSpecimenScore(IGeneticAlgorythm genAlgorythm, int generationNumber, ISpecimenModel specimen)
+        public static void CalculateSpecimenScore(IGeneticAlgorythm genAlgorythm, int generationNumber,int specimenNumber, ISpecimenModel specimen)
         {
             PlayerModel.BettingSystem = specimen.BettingSystem; // przypisanie betting systemu
-            Iterations.PerformIterations(genAlgorythm, generationNumber);
+            Iterations.PerformIterations(genAlgorythm, generationNumber, specimenNumber);
             specimen.Score  = Iterations.CalculateOptimizationParameter(); //! output !
-            
+
             Console.WriteLine($"Average Profit: {specimen.Score}");
         } 
     }

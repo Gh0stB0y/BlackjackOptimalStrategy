@@ -12,7 +12,7 @@ namespace BlackjackStrategy.Methods.Commands
         public static void PlayerRuined()
         {
             PlayerModel.Busted = true;
-            Console.WriteLine("Player lost all of his money");
+            //Console.WriteLine("Player lost all of his money");
             UpdateStatistics();          
         }
     }

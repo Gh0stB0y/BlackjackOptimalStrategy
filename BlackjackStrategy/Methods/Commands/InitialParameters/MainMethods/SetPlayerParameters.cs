@@ -43,11 +43,11 @@ namespace BlackjackStrategy.Methods.Commands
             PlayerModel.SeatsTaken = ConvertInputToList(input);
             AssignPlayerToSeats(PlayerModel.SeatsTaken);
 
-            do {
+            /*do {
                 Console.Write("Define betting system (split values with delimiter /, e.g. 1/2/34/1/4: ");
                 input = Console.ReadLine();
             } while (!CheckInputList(input));
-            PlayerModel.BettingSystem = ConvertInputToList(input);
+            PlayerModel.BettingSystem = ConvertInputToList(input);*/
         }
     }
 }
